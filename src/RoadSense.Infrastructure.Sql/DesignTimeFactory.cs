@@ -6,7 +6,7 @@ namespace RoadSense.Infrastructure.Sql;
 public static class DbDefaults
 {
     public const string ConnectionString =
-        @"Server=LAPTOP-RDQ454BS\SQLEXPRESS;Database=RoadSense;Trusted_Connection=True;TrustServerCertificate=True";
+        @"Server=(localdb)\\MSSQLLocalDB;Database=RoadSense;Trusted_Connection=True;TrustServerCertificate=True";
 
     public static DbContextOptions<RoadSenseDbContext> Options(string? cs = null) =>
         new DbContextOptionsBuilder<RoadSenseDbContext>().UseSqlServer(cs ?? ConnectionString).Options;
